@@ -1,0 +1,18 @@
+
+@media screen and (max-height: 810px){
+  .order-time-in{
+    margin-top: 140px;
+  }
+  .site-wrapper{
+  }
+}
+@media print {
+  .cabinet-calendar-top-filter,
+  .calendar-left-filter{
+    display: none !important;
+  }
+  .cabinet-calendar{
+    padding-left: 0;
+  }
+
+}

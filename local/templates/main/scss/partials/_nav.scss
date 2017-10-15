@@ -1,0 +1,91 @@
+.header-nav{
+  margin: 0 0 37px;
+  float: right;
+  font-family: $font;
+  a{
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.75px;
+    &:hover{
+      color: #ed4618;
+    }
+  }
+  .active{
+    a{
+      color: #ed4618;
+    }
+  }
+  li{
+    float: left;
+    line-height: 14px;
+    margin: 0 0 0 19px;
+    &:first-child{
+      margin: 0;
+    }
+  }
+}
+.header-nav-in{
+  float: left;
+
+}
+.nav-wrap-in,
+.nav-wrap{
+  float: left;
+}
+.header-log-in{
+  float: right;
+  margin: 3px 0 0 22px;
+  i{
+    float: left;
+    margin: 0px 5px 0 0;
+  }
+}
+.logo{
+  float: left;
+}
+
+.burger{
+  height: 19px;
+  width: 32px;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+  float: right;
+  left: 0;
+  margin: 26px 0 0 32px;
+  display: none;
+  @include transition( all .3s );
+  span{
+    width: 32px;
+    height: 3px;
+    background-color: #505050;
+    position: absolute;
+    @include transform(rotate(-180deg));
+    margin: 10px 0 0;
+    @include transition( all .3s );
+    &:first-child{
+      margin: 0;
+    }
+    &:last-child{
+      margin-top: 20px;
+      @include transform(rotate(180deg));
+    }
+  }
+  &.open{
+    span{
+      margin: 8px 0 0;
+      opacity: 0;
+      &:first-child{
+        opacity: 1;
+        @include transform(rotate(-45deg));
+      }
+      &:last-child{
+        opacity: 1;
+        @include transform(rotate(45deg));
+      }
+    }
+  }
+
+}

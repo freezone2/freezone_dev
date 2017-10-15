@@ -1,0 +1,17 @@
+#section-certificate .order .form-item.error {
+    margin-bottom: 26px !important;
+}
+
+#section-certificate #cert_form .form-item.error {
+    margin-bottom: 50px !important;
+}
+
+.footer-info li.disabled *,
+.footer-info li:hover.disabled *,
+.footer-info li:focus.disabled * {
+    color: #666666 !important;
+}
+
+.footer-info li.disabled span:hover {
+    color: #666666 !important;
+}

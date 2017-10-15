@@ -1,0 +1,100 @@
+.pay-info{
+  min-height: 100%;
+  background: #edf1f5;
+  @include box-sizing(border-box);
+  padding: 20% 0 183px;
+}
+
+.pay-info-list{
+  max-width: 1286px;
+  @include box-sizing(border-box);
+  margin: 0 auto;
+  padding: 0 154px 0 30px;
+  .accordion-item{
+    @include box-sizing(border-box);
+    padding: 0 153px 10px 22px;
+    margin: 26px 0 0;
+    &:first-child{
+      margin: 0;
+    }
+  }
+  .accordion-title{
+    padding: 60px 135px 49px 26px;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .accordion-drop{
+    padding-right: 0;
+  }
+  span{
+    font-size: 14px;
+    line-height: 22px;
+    color: #505050;
+    margin: 0;
+    display: block;
+    margin-bottom: 1px;
+  }
+  p{
+    letter-spacing: 0.1px;
+    font-family: $AvenirNext;
+    color: #505050;
+    line-height: 30px;
+    margin: 0 0 20px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  h2,
+  h3,
+  h4,
+  h5{
+    font-size: 18px;
+    font-family: $AvenirNext;
+    font-weight: 700;
+    letter-spacing: 0.45px;
+    line-height: 1.2em;
+    margin: 0 0 6px;
+  }
+  ul{
+    margin: 0 0 20px;
+  }
+  li{
+    color: #505050;
+    font-family: $AvenirNext;
+    line-height: 30px;
+    font-size: 18px;
+    position: relative;
+    padding: 0 0 0 23px;
+    &:after{
+      width: 5px;
+      height: 5px;
+      background-color: #7f7f7f;
+      content: '';
+      border-radius: 100%;
+      position: absolute;
+      top: 13px;
+      left: 0;
+      display: inline-block;
+    }
+  }
+  blockquote{
+    font-size: 14px;
+    line-height: 22px;
+    color: #505050;
+    margin: 0 0 20px;
+    display: block;
+  }
+
+}
+
+.pay-info-item{
+  clear: both;
+  margin: 0 0 51px;
+}
+.preview-card{
+  float: right;
+  width: 265px;
+  margin: 0 0 0 42px;
+  img{
+    float: left;
+  }
+}

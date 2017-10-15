@@ -1,0 +1,68 @@
+.images-wrap{
+  @include transition( all .4s 0.4s);
+  top: 0;
+  left: 0;
+  background: #cad1d6;
+  position: relative;
+  width: 400px;
+  margin: 34px 0 0;
+  height: 400px;
+  @include box-shadow(0px 0px 0px 0px rgba(#cad1d6, 0.75));
+  &:after{
+    @include transition( all .4s .7s);
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #ecf0f3;
+    z-index: -1;
+  }
+  img{
+    cursor: pointer;
+    min-width: 400px;
+    min-height: 400px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .active{
+    opacity: 1;
+    visibility: visible;
+    @include transition( all .5s );
+  }
+
+}
+
+.corporate-info{
+  &.active{
+    .fl_r{
+      .images-wrap{
+        @include box-shadow(10px 10px 0px 0px rgba(#cad1d6, 0.75));
+        &:after{
+          top: 20px;
+          left: 20px;
+        }
+      }
+    }
+    .fl_l{
+      .images-wrap{
+        @include box-shadow(-10px 10px 0px 0px rgba(#cad1d6, 0.75));
+        &:after{
+          top: 20px;
+          left: -20px;
+        }
+      }
+    }
+    .about-comp-text{
+      top: 0;
+      visibility: visible;
+      opacity: 1;
+    }
+
+  }
+
+}

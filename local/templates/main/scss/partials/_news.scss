@@ -1,0 +1,345 @@
+.news-in{
+  min-height: 100%;
+  @include box-sizing(border-box);
+  padding: 90px 0 100px;
+  background: #edf1f5;
+  .accordion-item{
+
+  }
+}
+
+.news-wrapper{
+  width: 900px;
+  margin: 0 auto;
+  position: relative;
+  left: 0;
+  @include transition( all .3s );
+  @include clearfix;
+  &.hide-sidebar{
+    left: 139px;
+  }
+}
+.news-date{
+  @extend .order-time-top;
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+  margin: 20px 0 43px;
+  opacity: 0;
+  @include transition( all .5s );
+  &.active{
+    opacity: 1;
+    margin: 0 0 43px;
+  }
+  p{
+    cursor: pointer;
+    i{
+      margin-right: 4px;
+    }
+  }
+}
+
+.news-list{
+  width: 620px;
+  float: left;
+}
+
+.news-item{
+  display: block;
+  position: relative;
+  @include box-sizing(border-box);
+  padding: 0;
+  background-color: white;
+  @include box-shadow(0 1px 3.6px 0.4px rgba(167, 181, 195, 0.5));
+  top: -20px;
+  opacity: 0;
+  height: 0;
+  @include transition( all .5s );
+  &.active{
+    top: 0;
+    height: auto;
+    margin: 0 0 30px !important;
+    opacity: 1;
+  }
+  &.hide{
+    top: -20px !important;
+    opacity: 0 !important;
+    margin: 0 !important;
+    height: 0 !important;
+  }
+  &:after {
+    left: 5px;
+    height: auto;
+    width: auto;
+    top: 5px;
+    bottom: 5px;
+    right: 5px;
+    @include box-sizing(border-box);
+    border: 1px solid #d3d6d8;
+    display: inline-block;
+    position: absolute;
+    content: '';
+  }
+  &:hover{
+    @include box-shadow(0 20px 50px rgba(167, 181, 195, 0.8));
+    &:after{
+      border-color: #8e9ad6;
+    }
+  }
+  .title{
+    font-size: 30px;
+    line-height: 42px;
+    margin: 0 5px 7px 0;
+  }
+  .date-news{
+    color: #969ca1;
+    font-size: 11px;
+    font-family: $font;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 1.4px;
+  }
+  .accordion-title{
+    padding: 46px 46px 46px 48px;
+    margin: 0;
+  }
+  .accordion-drop{
+    padding: 0 46px 54px 48px;
+    margin-top: -46px;
+  }
+  p{
+    color: #505050;
+    font-family: $font;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.1px;
+    margin: 0 0 14px;
+  }
+}
+
+
+.news-item-bottom{
+  position: relative;
+  margin: 51px 0 0;
+  padding: 30px 0 0;
+  &:after{
+    content: '';
+    top: 0;
+    left: 0;
+    display: inline-block;
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background-color: #505050;
+  }
+  .notification{
+    border-left: 2px solid #ed4618;
+    padding: 19px 80px 21px 30px;
+    margin: 30px 0 24px;
+    @include box-sizing(border-box);
+    background: #fef0ed;
+    color: #505050;
+    font-family: $Athelas;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  .image-name{
+    text-align: center;
+    height: 8px;
+    color: #505050;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 22px;
+    display: block;
+    margin: 0 0 31px;
+  }
+  ul{
+    margin: -10px 0 42px;
+
+  }
+  img{
+    max-width: 100%;
+    display: block;
+    margin: 0 0 5px;
+  }
+  li{
+    color: #505050;
+    font-family: $font;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 0 0 0 20px;
+    position: relative;
+    &:after{
+      position: absolute;
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 100%;
+      top: 12px;
+      left: 0;
+      display: inline-block;
+      background-color: #7f7f7f;
+    }
+  }
+}
+.news-in{
+  &.active{
+    img{
+      top: 0;
+      opacity: 1;
+    }
+  }
+}
+.sidebar{
+  float: right;
+  width: 250px;
+  margin: 5px 0 0;
+  img{
+    @include box-shadow(0 2px 10px rgba(167,181,195,.5));
+    top: -20px;
+    opacity: 0;
+    display: block;
+    margin: 0 0 30px;
+    position: relative;
+    @for $i from 1 through 100{
+      &:nth-child(#{$i}){
+        @if $i == 1{
+          @include transition( all .5s);
+        } @else {
+          $j: -1 + $i ;
+          @include transition( all 0.5s 0.2s*$j);
+        }
+      }
+    }
+  }
+}
+
+.sidebar-in{
+  width: 250px;
+  height: 320px;
+  @include box-sizing(border-box);
+  padding: 18px 10px 0 24px;
+  @include box-shadow(0 2px 10px rgba(167, 181, 195, 0.5));
+  background: url(#{$img}banner-bg.jpg) no-repeat;
+  .title{
+    color: #ed4618;
+    font-family: $font;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0 0 20px;
+    line-height: 42px;
+  }
+  ul{
+    position: relative;
+    padding: 0 0 35px;
+    margin: 0 0 25px;
+    &:after{
+      content: '';
+      position: absolute;
+      display: inline-block;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 2px;
+      background-color: #ed4618;
+    }
+  }
+  li{
+    color: #505050;
+    font-family: $font;
+    font-size: 11px;
+    letter-spacing: 0.9px;
+    font-weight: 600;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+  i{
+    float: left;
+    margin: 9px 11px 0 0;
+  }
+  a{
+    color: #ed4618;
+    letter-spacing: 0.9px;
+    font-family: $font;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+.choice-date{
+  width: 445px;
+  display: none;
+  padding: 0 0 0;
+  .select2{
+    width: 50px !important;
+    margin: 0 0 4px;
+  }
+  .selection{
+    width: auto;
+    display: inline-block;
+  }
+  .select2-selection__arrow{
+    line-height: 22px;
+    margin: 0;
+    b{
+      right: 16px;
+    }
+  }
+  .select2-selection__rendered{
+    padding: 0 4px 0 5px;
+    margin: 0;
+    color: #ed4618;
+    font-family: $AvenirNext;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+  .select2-selection{
+    margin: 0;
+    border: none;
+    height: auto;
+  }
+  .icon-close-select{
+    margin: 14px 6px 0 2px;
+    float: left;
+    cursor: pointer;
+  }
+}
+.mounts-list{
+  overflow: hidden;
+  clear: both;
+  li{
+    float: left;
+    font-family: $AvenirNext;
+    font-size: 11px;
+    margin: 0 10px 13px 0;
+    padding: 0 4px 0 5px;
+    font-weight: 600;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #969ca1;
+    letter-spacing: 0.75px;
+    border-radius: 2px;
+    cursor: pointer;
+    &:hover{
+      color: #ed4618;
+    }
+  }
+  .active{
+    color: white !important;
+    background: #ed4618;
+  }
+}

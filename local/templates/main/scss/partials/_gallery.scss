@@ -1,0 +1,248 @@
+.link-back{
+  float: left;
+  width: 154px;
+  color: #969ca1;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 36px;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  &:hover{
+    color: #505050;
+  }
+  i{
+    float: left;
+    margin: 12px 11px 0 0;
+  }
+}
+.gallery-page{
+  @extend .contacts-page;
+  padding: 150px 0 100px;
+  .index-service-list-tab-menu{
+    margin-left: -465px;
+  }
+}
+.gallery-list{
+  .title{
+    color: white;
+    font-size: 30px;
+    position: relative;
+    z-index: 5;
+    font-weight: 500;
+    line-height: 42px;
+    margin: 0 0 2px;
+  }
+  .sub-info{
+    display: block;
+    position: relative;
+    z-index: 5;
+    color: white;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 15px;
+    i{
+      float: left;
+      margin: 0 8px 0 0;
+    }
+  }
+}
+.tab-item{
+  &.show-tab{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    .gallery-item{
+      top: 0;
+      opacity: 1;
+    }
+  }
+}
+.gallery-item{
+  display: block;
+  width: 620px;
+  cursor: pointer;
+  margin: 0 auto 30px;
+  height: 250px;
+  @include box-sizing(border-box);
+  padding: 24px 0 0 32px;
+  position: relative;
+  opacity: 0;
+  top: -20px;
+  @include box-shadow(0 2px 9px 1px rgba(167, 181, 195, 0.8));
+  @for $i from 1 through 100{
+    &:nth-child(#{$i}){
+      @if $i == 1{
+        @include transition( all .5s);
+      } @else {
+        $j: -1 + $i ;
+        @include transition( all 0.5s 0.2s*$j);
+      }
+    }
+  }
+  img{
+    position: absolute;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+  }
+  &:hover{
+    img{
+      opacity: .3;
+      z-index: 4;
+    }
+    .overlay{
+      background-color: #1abcdf;
+      opacity: 1;
+      display: block;
+      z-index: 2;
+    }
+  }
+}
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: #999;
+  opacity: .7;
+  display: none;
+}
+
+.fancybox-next{
+  position: fixed;
+  top: 420px;
+  right: 5%;
+  @include sprite($arr-n-p);
+  opacity: 0.5;
+  &:hover{
+    opacity: 1;
+  }
+}
+.fancybox-prev{
+  position: fixed;
+  top: 474px;
+  right: 5%;
+  left: auto;
+  @include sprite($arr-p-p);
+  opacity: 0.5;
+  &:hover{
+    opacity: 1;
+  }
+}
+.tab-item{
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  &.show-tab{
+    visibility: visible;
+    height: auto;
+  }
+}
+
+.gallery-item-video{
+  &:before{
+    position: absolute;
+    top: 94px;
+    left: 50%;
+    margin-left: -30px;
+    @include sprite($play);
+    content: '';
+    z-index: 10;
+  }
+}
+.tab-item{
+
+}
+
+.fancybox-title-float-wrap {
+  text-align: left;
+  width: 800px;
+  margin: 0 0 0 -400px;
+  left: 50%;
+  bottom: -35px;
+  .child{
+    font-weight: 400;
+    font-size: 18px;
+    padding: 0;
+    background: none;
+    text-align: left;
+  }
+}
+.gallery-item-in{
+  padding: 0 0 100px;
+  overflow: hidden;
+  background: #edf1f5;
+  a{
+    float: left;
+    width: 20%;
+    position: relative;
+    &:after{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '';
+      display: none;
+      z-index: 4;
+      background-color: white;
+      @include background(linear-gradient(180deg, rgba(33, 33, 33, 0.42) 0%, transparent 100%, transparent 100%));
+    }
+    &:before{
+      @include sprite($zoom);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      content: '';
+      z-index: 5;
+      margin: -15px 0 0 -23px;
+      display: none;
+    }
+    &:hover{
+      &:before,
+      &:after{
+        display: inline-block;
+      }
+    }
+  }
+  img{
+    display: block;
+    width: 100%;
+  }
+}
+
+.fancybox-title-over-wrap{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  background: none;
+  padding: 0;
+  height: 100%;
+  color: white;
+  font-size: 11px;
+  font: $font;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+  line-height: 22px;
+  text-transform: uppercase;
+  span,
+  p{
+    letter-spacing: 0.75px;
+    @include opacity(0.5);
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+  p{
+    bottom: -34px;
+  }
+  span{
+    top: -36px;
+  }
+}

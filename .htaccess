@@ -1,0 +1,47 @@
+RewriteEngine on
+RewriteCond %{HTTP:HTTPS} !=on [NC]
+RewriteRule ^(.*)$ https://www.freezone.net/$1 [R=301,L]
+SetEnvIf X-Forwarded-Proto https HTTPS=on
+
+Options -Indexes 
+ErrorDocument 404 /404.php
+Header set Access-Control-Allow-Origin "*"
+
+<IfModule mod_php5.c>
+  php_flag session.use_trans_sid off
+ php_value mbstring.func_overload 2
+  php_value mbstring.internal_encoding UTF-8
+  php_value max_execution_time 60
+
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+
+  RewriteCond %{HTTP_HOST} ^freezone.net$ [NC]
+  RewriteRule ^(.*)$ http://www.freezone.net/$1 [R=301,L]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 day"
+  ExpiresByType image/gif "access plus 3 day"
+  ExpiresByType image/png "access plus 3 day"
+  ExpiresByType text/css "access plus 3 day"
+  ExpiresByType application/javascript "access plus 3 day"  
+</IfModule>
+
+
+php_value max_input_vars 10000

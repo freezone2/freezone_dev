@@ -1,0 +1,483 @@
+.competition-info-6 .line-form.line-success {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+    transition: all 0.5s linear;
+    text-align: center;
+    font: bold 22px/26px "AvenirNext";
+    margin: 15px 0;
+    justify-content: center;
+}
+.competition-info-6 .line-form.line-success.line-hidden {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+.add__field__checkbox .get-add-line {
+    margin: 0 0 18px 0 !important;
+}
+.competition-info .wrap-disp-form.error {
+    border: 1px solid #ed4618;
+}
+.competition-info-6 .add__field__checkbox .get-add-line input[type="text"] {
+    width: 80%;
+}
+.error-type-page {
+    display: block;
+    font-style: italic;
+    font-size: 13px;
+    color: red;
+}
+.error-type-page.error-hidden {
+    display: none;
+}
+.page-competition > .site-wrapper {
+    z-index: 5;
+    position: relative;
+}
+.page-competition > .site-wrapper .site-wrapper-in {
+    padding-top: 335px;
+}
+.page-competition .slide-img {
+    z-index: 0;
+}
+.page-competition .site-wrapper-in .title-page {
+    color: #c85333;
+    text-transform: uppercase;
+    font: 700 100px/104px "Roboto";
+    margin: 0 0 52px 0;
+}
+.page-competition .site-wrapper-in {
+    text-align: center;
+}
+.page-competition .site-wrapper-in p {
+    color: #ffffff;
+    text-transform: uppercase;
+    font: 700 35px/39px "Roboto";
+    margin: 0 0 40px 0;
+}
+
+.competition-info .btn-comp-page {
+    box-sizing: border-box;
+    display: inline-block;
+    color: #ffffff;
+    font: bold 31px/32px "AvenirNext";
+    width: 550px;
+    padding: 20px 25px;
+    -webkit-border-radius: 4px/3px;
+    -moz-border-radius: 4px/3px;
+    border-radius: 4px/3px;
+    background-color: #ed4618;
+}
+.page-competition {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 848px;
+    border: 10px solid #edf1f5;
+    position: relative;
+    padding: 0 !important;
+}
+.page-competition .site-wrapper-in {
+	background: transparent no-repeat 50% 50%;
+	background-size: cover;
+}
+.competition-info .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.competition-info .item-competition {
+    width: 340px;
+}
+.competition-info.competition-info-1 .row {
+    align-items: center;
+}
+.competition-info.competition-info-1 .item-competition {
+    /*width: 420px;*/
+    width: 356px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.competition-info.competition-info-1 .item-competition:first-child {
+    padding-right: 30px;
+    padding-left: 0px;
+}
+.competition-info.competition-info-1 .item-competition:last-child {
+    padding-left: 30px;
+    padding-right: 0px;
+}
+@media (max-width: 1023px) {
+    .competition-info .item-competition {
+        width: 250px;
+    }
+}
+@media (max-width: 767px) {
+    .competition-info .item-competition {
+        width: 175px;
+    }
+}
+@media (max-width: 575px) {
+    .competition-info .row {
+        justify-content: center;
+    }
+    .competition-info .item-competition {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+.competition-info .item-title {
+    text-align: center;
+    font: normal 40px/44px "AvenirNext";
+}
+.competition-info .item-competition img {
+    width: 100%;
+}
+.competition-info .item-competition .item-img {
+    margin: 0 0 10px 0;
+}
+.competition-info .item-competition .item-text-wrap {
+    text-align: center;
+    font: 30px/34px "AvenirNext";
+}
+
+.competition-info table {
+    width: 100%;
+}
+.competition-info th {
+    background: #ffffff;
+    color: #c85333;
+}
+.competition-info tr {
+    border: 2px solid #00245a;
+}
+.competition-info th,
+.competition-info td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 0;
+}
+.competition-info-1 .item-title {
+    margin: 54px 0 72px;
+}
+.competition-info-2 .item-title {
+    margin: 90px 0 56px;
+}
+.competition-info-2 .small-name {
+    font: normal 25px/27px "AvenirNext";
+    color: #ed4618;
+    margin: 0 0 19px 0;
+}
+.competition-info-2 .small-text {
+    font: normal 16px/18px "AvenirNext";
+}
+.competition-info-3 .item-title {
+    margin: 90px 0 82px;
+}
+.competition-info-3 .row-docs {
+    display: flex;
+    justify-content: space-between;
+}
+.competition-info-3 .page-doc {
+    display: block;
+    color: #ed4618;
+    font: normal 16px/18px "AvenirNext";
+    text-decoration: underline;
+}
+.competition-info-3 .page-doc:before {
+    content: "";
+    background: url("/custom_page/img/icon_pdf.png") no-repeat;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    display: block;
+}
+.competition-info-3 .page-doc span {
+    text-align: center;
+    display: block;
+    margin: 11px 0 0 0;
+}
+.competition-info-4 .item-title {
+    margin: 100px 0 33px;
+}
+.competition-info-4 {
+    text-align: center;
+}
+.competition-info-4 table {
+    margin: 58px 0 0 0;
+}
+.competition-info-5 .item-title {
+    margin: 100px 0 85px;
+}
+.competition-info-6 .item-title {
+    margin: 85px 0 50px;
+}
+.competition-info .small-price {
+    color: #ed4618;
+    font: normal 25px/27px "AvenirNext";
+    margin: 0 0 35px 0;
+}
+.competition-info .small-price span {
+    font: bold 45px/47px "AvenirNext";
+}
+.competition-info-5 .note {
+    text-align: center;
+    font: normal 14px/18px "AvenirNext";
+    margin: 38px 0 0 0;
+}
+.competition-info-6 form {
+    width: 1112px;
+    margin: 0 auto;
+}
+-webkit-input-placeholder {color:#929291; font: normal 14px/18px "AvenirNext";}
+input.input-text::-moz-placeholder{color:#929291; font: normal 14px/18px "AvenirNext";}
+input.input-text:-moz-placeholder{color:#929291; font: normal 14px/18px "AvenirNext";}
+input.input-text:-ms-input-placeholder{color:#929291; font: normal 14px/18px "AvenirNext";}
+.competition-info .select2-selection__placeholder {
+	color:#929291;
+    font: normal 14px/18px "AvenirNext";
+}
+.competition-info-6 input[type="text"],
+.competition-info-6 input[type="email"],
+.competition-info-6 input[type="tel"] {
+    box-sizing: border-box;
+    width: 100px;
+    height: 32px;
+    padding: 11px 14px;
+    background: #fff;
+    border: solid 1px #000;
+    font: normal 16px/18px "AvenirNext";
+}
+.competition-info .select2-selection__rendered {
+	color: #000;
+}
+.competition-info-6 input[type="text"]:focus,
+.competition-info-6 input[type="email"]:focus,
+.competition-info-6 input[type="tel"]:focus {
+    outline: none;
+}
+.competition-info-6 .line-form {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 25px 0;
+}
+.competition-info-6 .line-form-checks  {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.competition-info-6 .line-form-1 input,
+.competition-info-6 .line-form-6 input,
+.competition-info-6 .line-form-7 input,
+.competition-info-6 .line-form-7 select {
+    width: 532px;
+}
+.competition-info-6 .line-form-2 input {
+    width: 340px;
+}
+.form-title {
+    font: normal 20px/18px "AvenirNext";
+    margin: 14px 0 26px;
+    text-align: center;
+}
+.form-title-line {
+    font: bold 22px/18px "AvenirNext";
+    color: #ed4618;
+    margin: 0 0 24px 0;
+}
+.line-form .checkbox {
+    margin: 0 0 18px 0;
+    width: 337px;
+}
+.line-form .checkbox label {
+    padding: 0;
+}
+.line-form .checkbox label:before {
+    content: none;
+}
+.line-form .checkbox input + span {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: solid 1px #000;
+    margin: 0 16px 0 0;
+}
+.line-form .checkbox span {
+    font: bold 16px/18px "AvenirNext";
+    color: #343434;
+    text-transform: inherit;
+}
+.line-form .checkbox label {
+    font: bold 16px/18px "AvenirNext";
+    color: #343434;
+    text-transform: inherit;
+}
+.line-form-checks {
+    margin: 0 0 32px 0;
+}
+.competition-info-6 .line-form-6 {
+    margin-top: 35px;
+}
+.competition-info .field_wrap-size .select2-results {
+    display: block;
+    padding: 15px 0px;
+}
+.competition-info .field_wrap-size .select2-results__option {
+    font-size: 16px;
+    text-transform: none;
+    padding: 5px 25px;
+    line-height: 1;
+    border-bottom: 1px solid #f4f3f1;
+    -webkit-transition: background-color .15s ease-in-out;
+    -o-transition: background-color .15s ease-in-out;
+    -moz-transition: background-color .15s ease-in-out;
+    transition: background-color .15s ease-in-out;
+    color: #7f7b6f;
+}
+.competition-info .field_wrap-size .select2-container {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+}
+.competition-info .field_wrap-size .select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: #f4f3f1;
+    color: #48453d;
+    font-weight: 700;
+}
+.competition-info .field_wrap-size .select2-selection {
+    box-sizing: border-box;
+    height: 32px;
+    padding: 0;
+    background: #fff;
+    border: solid 1px #000;
+}
+.competition-info-6 .field_wrap-size {
+    width: 532px;
+    position: relative;
+}
+.competition-info-6 .field_wrap-size * {
+    box-sizing: border-box;
+}
+.competition-info .field_wrap-size .select2-hidden-accessible {
+    border: 0!important;
+    clip: rect(0 0 0 0)!important;
+    height: 1px!important;
+    margin: -1px!important;
+    overflow: hidden!important;
+    padding: 0!important;
+    position: absolute!important;
+    width: 1px!important;
+}
+.competition-info .field_wrap-size .select2-results__options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.competition-info .field_wrap-size .select2-container--default .select2-results>.select2-results__options {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.competition-info .field_wrap-size .select2-dropdown {
+    background-color: #fff;
+    border: 1px solid #000;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    left: -100000px;
+    width: 100%;
+    z-index: 1051;
+    margin: 0;
+}
+
+.competition-info .field_wrap-size .select2-container--open .select2-dropdown {
+    left: 0;
+}
+.competition-info .field_wrap-size .select2-container--open .select2-dropdown--below {
+    border-top: none;
+    -moz-border-radius-topleft: 0;
+    border-top-left-radius: 0;
+    -moz-border-radius-topright: 0;
+    border-top-right-radius: 0;
+}
+.competition-info .field .select2-dropdown {
+    border: none;
+    background-color: #f4f3f1;
+}
+.competition-info .line-button .btn-comp-page {
+    box-sizing: border-box;
+    display: inline-block;
+    color: #ffffff;
+    font: bold 22px/22px "AvenirNext";
+    padding: 14px 35px;
+    -webkit-border-radius: 4px/3px;
+    -moz-border-radius: 4px/3px;
+    border-radius: 4px/3px;
+    background-color: #ed4618;
+    width: 317px;
+    height: 49px;
+    border: none;
+}
+.competition-info-6 .line-form.line-button {
+    margin: 16px 0 75px;
+    text-align: center;
+    justify-content: center;
+}
+
+.line-link {
+    display: block;
+    text-decoration: underline;
+    font: normal 16px/18px "AvenirNext";
+    margin: 8px 0 0 0;
+}
+.competition-info .field_wrap-size .select2-selection__rendered {
+    font: normal 16px/32px "AvenirNext";
+    text-transform: none;
+    padding-left: 14px;
+    padding-right: 35px;
+    margin: 0;
+}
+.competition-info .field_wrap-size.error .select2-selection {
+    border-color: #ed4618;
+}
+.competition-info .field_wrap-size .select2-selection__placeholder {
+    margin: 0;
+    display: inline !important;
+}
+.competition-info .field_wrap-size .select2-selection__arrow b {
+    background: url("/custom_page/img/img_select.png") no-repeat;
+    width: 34px;
+    height: 31px;
+    top: 0;
+}
+.competition-info .field_wrap-size .select2-container--open .select2-selection__arrow b {
+    background: url("/custom_page/img/img_select_up.png") no-repeat;
+}
+.competition-info .field_wrap-size .select2-selection__arrow {
+    width: 34px;
+    height: 31px;
+    border-left: 1px solid #000;
+    line-height: inherit;
+    display: inline !important;
+    position: absolute;
+    z-index: inherit;
+}
+.competition-info .field_wrap-size .select2-container .select2-selection--single .select2-selection__rendered {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.competition-info .field_wrap-size .select2-search--dropdown {
+    display: none !important;
+}

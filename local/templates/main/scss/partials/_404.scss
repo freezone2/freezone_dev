@@ -1,0 +1,47 @@
+.error-masthead{
+  background: url(#{$img}error-masthead.jpg) no-repeat center center;
+  background-size: cover;
+  .section-wrap{
+    opacity: 1;
+    visibility: visible;
+  }
+  p{
+    color: white;
+    letter-spacing: 0.1px;
+    font-family: $font;
+    font-size: 30px;
+    font-weight: 400;
+    width: 550px;
+    margin: 0 0 38px;
+    line-height: 42px;
+  }
+  a{
+    height: 50px;
+    letter-spacing: 0.1px;
+    padding:  0;
+    line-height: 46px;
+    border: 2px solid rgba(255,255,255,.25);
+    @include border-radius(6px);
+    color: #fff;
+    margin-bottom: 0 !important;
+    font-size: 18px;
+    background: none;
+    width: 230px;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    @include box-sizing(border-box);
+    &:hover{
+      border: none;
+      padding: 2px;
+      color: #fff;
+      @include border-radius(6px);
+      background-color: #ed4517;
+      @include box-shadow(0 4px 10px rgba(40,28,25,.5), inset 0px -3px 0px 0px #a63c1f);
+    }
+    &:active{
+      color: #fff;
+      background-color: #e73100;
+    }
+  }
+}

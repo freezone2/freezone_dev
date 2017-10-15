@@ -1,0 +1,98 @@
+.about-command-cabinet{
+  .section-wrap{
+    width: 100%;
+    max-width: 1500px;
+    @include box-sizing(border-box);
+    padding-right: 30px;
+    padding-left: 21px;
+  }
+  .user-cabinet-info{
+    padding-top: 0;
+    margin-top: -2px;
+  }
+  .user-cabinet-info{
+    margin-right: 5%;
+  }
+  .center{
+    padding-left: 2%;
+  }
+  .command-item {
+    img{
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      filter: gray;
+      -webkit-filter: grayscale(1);
+      @include transition( all .5s );
+    }
+    &:hover{
+      img{
+        filter: none;
+        -webkit-filter: none;
+        -moz-filter: none;
+        -ms-filter: none;
+        -o-filter: none;
+        -webkit-filter: none;
+      }
+    }
+  }
+}
+
+.popup-team{
+  width: 737px;
+  margin: 0 auto;
+  position: absolute;
+  top: 100px;
+  overflow-y: auto;
+  bottom: 100px;
+  z-index: 20;
+  left: 50%;
+  margin-left: -368px;
+}
+.popup-team-in{
+  background: #fff;
+  @include box-sizing(border-box);
+  padding: 25px 75px 40px 31px;
+  font-family: $AvenirNext;
+  img{
+    width: 160px;
+    height: 180px;
+    float: left;
+    margin: 8px 18px 0 0;
+  }
+  .name{
+    color: #1d35ad;
+    line-height: 1.2em;
+    font-size: 30px;
+    margin: 0 0 5px;
+  }
+  .categories{
+    letter-spacing: 0.75px;
+    color: #a8aeb2;
+    font-size: 11px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin: 0 0 25px;
+  }
+  .title{
+    letter-spacing: 0.1px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    margin: 36px 0 21px;
+  }
+  li{
+    color: #505050;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+    line-height: 24px;
+    margin: 0 -20px 20px 0;
+  }
+  p{
+    color: #505050;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 25px 19px 0;
+  }
+}

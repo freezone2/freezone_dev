@@ -1,0 +1,3 @@
+<?
+$sSectionName="custom_page";
+?>

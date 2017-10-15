@@ -1,0 +1,245 @@
+.header-nav.show {
+	background: #fff ! important;
+}
+.header-tel {
+	font-size: 40px;
+}
+.header-tel i, .icon-tel {
+	display: none !important;
+}
+.burger  {
+	margin: 18px 0 0 15px;
+	 height: 42px;
+	 width: 20px;
+	 text-align: right;
+	 padding-right: 30px;
+}
+.burger span {
+	height: 5px;
+}
+.masthead-btn-group .button {
+	width: 250px;
+}
+.btn-red, .btn-blue {
+	font-size: 28px;
+	margin-top: 140px !important;
+}
+.btn-red.open-thank-order, .btn-blue.open-thank-order {
+	margin-top: 20px !important;
+}
+.footer-callback {
+	display: none;
+}
+.tab-menu {
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+.tab-menu > p {
+	width: 200px;
+}
+.tab-menu > p, #truba_selector li {
+	font-size: 30px;
+}
+.about-nav {
+	display: none !important;
+}
+.change-user-form input {
+	height: 28px;
+}
+.footer-certificate.to-fixed, .to-fixed.footer-order, .footer-certificate.footer-hide-info, .footer-hide-info, .footer-certificate, .footer-order {
+	display: none !important;
+}
+.order-time-top .news-date, .news-date .news-date {
+	display: none;
+}
+
+#fp_next:not(.wt), #fp_prev:not(.wt) {
+	display: none !important;
+}
+
+/* portrait */
+@media screen and (orientation:portrait) {
+	.index-service-item {
+	width: 600px;
+	height: 390px;
+	}
+	.index-service-item-in p {
+		font-size: 30px;
+		line-height: 40px;
+		
+	}
+	.index-service-item-in p.title {
+		font-size: 40px;
+	}
+	.index-about-comp-text, .about-comp-text {
+	font-size: 50px;
+	line-height: 70px;
+	width: 800px !important;
+	float: none !important;
+	}
+	.index-about-comp-text h3, .about-comp-text h3 {
+		font-size: 60px;
+		font-weight: bold;
+		line-height: 70px;
+	}
+	.index-about-comp-preview, .about-comp-preview {
+		float: none;
+		display: block;
+		margin-top: 30px;
+		margin-left: 200px;
+		display: none;
+	}
+	.about-info-item {
+		clear: both;
+		float: none;
+	}
+	.equipment-info .subtitle {
+		font-size: 28px;
+		line-height: 34px;
+	}
+	.equipment-info-item span {
+		font-size: 20px;
+	}
+	.equipment-history-in .title {
+		font-size: 40px;
+		line-height: 44px;
+	}
+	.equipment-history-in p {
+		font-size: 34px;
+		line-height: 38px;
+	}
+	.equipment-icon-group-item {
+		height: 300px;
+	}
+	.equipment-icon-group-item p {
+		font-size: 34px;
+		line-height: 38px;
+	}
+	.order-time-list li {
+		font-size: 11px;
+	}	
+	.order-time-list li br {
+		line-height: 3px;
+		display: block; 
+		height: 2px;
+	}
+	.order {
+		width: 500px;
+	}
+	.order-form input[type="password"], .order-form input[type="text"], .order-form input[type="email"] {
+		font-size: 24px;
+		line-height: 30px;
+	}
+	.about-masthead .subtitle {
+		font-size: 32px;
+		line-height: 36px;
+	}	
+	.header .index-service-list-tab-menu {
+		position: absolute;
+		top: 100px;
+		left: 0px;
+	}
+	.index-service-list-tab-menu p {
+		font-size: 24px;
+	}
+	.index-service-list-tab-menu li {
+		font-size: 24px;
+	}
+	.contact-left {
+		padding-left: 20px;
+	}
+	.map-in {
+		float: left;
+		margin-top: 50px;
+	}
+	.sing-in input[type="password"], .recover-pass input[type="password"], .sing-in input[type="text"], .recover-pass input[type="text"], .sing-in input[type="email"], .recover-pass input[type="email"] {
+		font-size: 25px;
+		line-height: 50px;
+	}
+	.order-component .order-time-list li {
+		font-size: 14px;
+	}
+	.order2 span, .order2-info p, .order2-inf .select2-trainer_cat-container {
+		font-size: 22px;
+	}
+}
+/* landscape */
+@media screen and (orientation:landscape) {
+	.index-service-item {
+		height: 360px;
+	}
+	.index-service-item-drop .title {
+		height: 90px;
+		font-size: 28px;
+	}
+	.index-service-item-drop .index-service-item-bottom {
+		margin-bottom: 15px;
+	}
+	.index-about-comp-text, .about-comp-text {
+		font-size: 22px;
+		line-height: 25px;
+		width: 800px;
+		float: left;
+	}
+	.index-about-comp-text h3, .about-comp-text h3 {
+		font-size: 38px;
+		font-weight: bold;
+		line-height: 42px;
+	}
+	.index-about-comp-preview, .about-comp-preview {
+		float: left;
+		width: 300px;
+		display: none;
+	}
+	.equipment-info-item .subtitle {
+		margin-bottom: 6px;
+	}
+	.equipment-info-item p {
+		line-height: 20px;
+	}
+	.equipment-info-item li {
+		margin-bottom: 5px;
+	}
+	.header .index-service-list-tab-menu {
+		position: absolute;
+		top: 100px;
+		left: 0px;
+	}
+	.index-service-list-tab-menu p {
+		font-size: 24px;
+	}
+	.index-service-list-tab-menu li {
+		font-size: 24px;
+	}
+	.contact-left {
+		padding-left: 20px;
+	}
+	.map-in {
+		float: left;
+		margin-top: 50px;
+	}
+	.order2 {
+		padding: 10px 70px 20px !important;
+	}
+	.order2 li {
+		margin: 0 0 10px;
+	}
+	.index-masthead .masthead-btn-group { 
+		top: 30%;
+	}
+	.slides .site-wrapper-in {
+		font-size: 34px;
+		padding-top: 50px;
+	}
+	.slides .flex-control-nav {
+		bottom: 118px;
+	}
+	.slide-img .site-wrapper-in img {
+		max-height: 300px;
+	}
+	.index-service-item-drop .title {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	
+}

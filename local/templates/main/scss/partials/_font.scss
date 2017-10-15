@@ -1,0 +1,23 @@
+@mixin fonts($font-name, $font-url) {
+  @font-face {
+    font-family: '#{$font-name}';
+    src: url('fonts/#{$font-url}.eot');
+    src: url('fonts/#{$font-url}.eot?#iefix') format('embedded-opentype'),
+    url('fonts/#{$font-url}.woff2') format('woff2'),
+    url('fonts/#{$font-url}.woff') format('woff'),
+    url('fonts/#{$font-url}.ttf') format('truetype');
+    font-style: normal;
+    @content
+  }
+}
+
+@include fonts(AvenirNext, avenirnext-demibold-webfont){
+  font-weight: 700;
+};
+@include fonts(AvenirNext, avenirnext-medium-webfont);
+
+@include fonts(Athelas, athelas-regular-webfont){
+};
+@include fonts(Athelas, athelas-bold-webfont){
+  font-weight: 700;
+};

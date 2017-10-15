@@ -1,0 +1,247 @@
+.footer{
+  z-index: 14;
+  height: 0;
+  bottom: 0;
+  @include transition( margin-bottom .5s, bottom 1s, opacity 1s  );
+  position: relative;
+  &.footer-fix{
+    background: #edf1f5 !important;
+    margin-top: -71px;
+    position: relative !important;
+  }
+  .wrapper{
+    width: 100%;
+    max-width: 1500px;
+    @include box-sizing(border-box);
+    min-width: 1px;
+    height: 0;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  &.to-fixed{
+    left: 0;
+    width: 100%;
+    position: fixed;
+    &.footer-cabinet{
+      bottom: 74px;
+    }
+  }
+  a{
+    line-height: 35px;
+    letter-spacing: 0.75px;
+    float: left;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 21px 0 0;
+    &:hover{
+      color: #ed4618;
+    }
+  }
+  .made{
+    width: 54px;
+    height: 35px;
+    display: block;
+    float: right;
+    margin: 0;
+    background: url(#{$img}deus-w.png) no-repeat;
+    &:hover{
+      background: url(#{$img}deus-r.png) no-repeat;
+    }
+  }
+  &.hide-line{
+    .vertical-line{
+      display: none;
+    }
+  }
+
+}
+.footer-dark{
+  a{
+    color: #969ca1 !important;
+    &:hover{
+      color: #ed4618 !important;
+    }
+  }
+  .made{
+    background: url(#{$img}deus-d.png) no-repeat;
+    &:hover{
+      background: url(#{$img}deus-r.png) no-repeat;
+    }
+  }
+  .vertical-line{
+    background: #cbd0d4;
+  }
+  .footer-callback{
+    i{
+      @include sprite($arr-up);
+      display: none;
+    }
+    &.active{
+      i{
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.footer-certificate{
+  bottom: -100px !important;
+  @include transition( height .3s, bottom 0.5s );
+  text-align: center;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #2c2c2d;
+  padding-top: 0;
+  padding-bottom: 0;
+  @include box-shadow(0 -10px 27px 3px rgba(167, 181, 195, 0.17));
+  .vertical-line{
+    display: none;
+  }
+  .made{
+    margin-top: 28px;
+    display: block;
+    background: url(../images/deus-d.png) no-repeat;
+  }
+  p{
+    i{
+      font-size: 9px;
+      position: relative;
+      top: -7px;
+    }
+  }
+  .open-more-info-footer{
+    color: #a8aeb2;
+    margin-top: 60px;
+    float: left;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 11px;
+    letter-spacing: 0.1px;
+    i{
+      float: left;
+      margin: 2px 12px 0 0;
+    }
+    &:hover{
+      opacity: .9;
+    }
+  }
+  &.to-fixed{
+    bottom: 0 !important;
+  }
+
+  &.footer-hide-info{
+    height: 50px;
+    .made{
+      margin: 9px 0 0;
+    }
+    .open-more-info-footer{
+      margin-top: 20px;
+    }
+    .footer-info{
+      height: 50px;
+      p{
+        display: none;
+
+      }
+      span{
+        margin-top: 20px;
+        display: block;
+        line-height: 11px;
+      }
+    }
+    .icon-arr-drop{
+      @include sprite($arr-drop)
+    }
+  }
+
+}
+
+.footer-callback{
+  i{
+    @include sprite($arr-t-w);
+    display: none;
+    margin: 0px 5px 0 0;
+  }
+  &.active{
+    i{
+      display: inline-block;
+    }
+  }
+}
+
+.footer-info{
+  overflow: hidden;
+  display: inline-block;
+  height: 90px;
+  li{
+    float: left;
+    width: 224px;
+    height: 100%;
+    text-align: center;
+    @include box-sizing(border-box);
+    padding: 0 31px 0 34px;
+    border-left: 1px solid #222223;
+    border-right: 1px solid #3d3d40;
+    cursor: pointer;
+    &:hover{
+      span{
+        color: #ed4618 !important;
+      }
+    }
+    &:first-child{
+      border-left: none;
+    }
+    &:last-child{
+      border-right: none;
+    }
+  }
+  .active{
+    span{
+      color: #ed4618 !important;
+    }
+  }
+  p{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: white;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.1px;
+    margin: 17px 0 8px;
+  }
+  span{
+    color: #a8aeb2;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+  }
+}
+
+.footer-hide-info{
+  .icon{
+    @include sprite($arr-drop2)
+  }
+}
+
+.footer-cabinet{
+  a{
+    color: #969ca1 !important;
+    &:hover{
+      color: #ed4618 !important;
+    }
+  }
+  .made{
+    background: url(#{$img}deus-d.png) no-repeat;
+    &:hover{
+      background: url(#{$img}deus-r.png) no-repeat;
+    }
+  }
+}
+
+

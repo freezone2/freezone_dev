@@ -1,0 +1,215 @@
+.section-orders{
+  @extend .section-certificate;
+  .slide{
+    background: #89c8f5;
+    border: 10px solid #edf1f5;
+    &.active{
+      border: 10px solid #edf1f5;
+      border-left: none;
+    }
+  }
+  .slide-sportsmen,
+  .slide-order{
+    border: none !important;
+  }
+  .slide-order,
+    .slide-sportsmen{
+    background:#edf1f5;
+  }
+  .big-btn{
+    background: #89c8f5;
+    width: 33.3%;
+    border-left: 10px solid #edf1f5;
+    border-right: none !important;
+    @include box-sizing(border-box);
+    p{
+      text-align: center;
+      color: white;
+      font-family: $font;
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 0.1px;
+      opacity: 0;
+      margin: 15px 0 0;
+      position: relative;
+      @include transition( all .3s );
+      top: -20px;
+    }
+    &:hover{
+      background: #1a88d6 url(../images/order-certificate.png) no-repeat center center;
+      p{
+        top: 0;
+        opacity: 1;
+      }
+    }
+  }
+  .big-btn-prev{
+    &:hover{
+      background: #1a88d6 url(../images/order-amateure.png) no-repeat center center;
+    }
+  }
+  .big-btn-next{
+    &:hover{
+      background: #1a88d6 url(../images/order-sportsmen.png) no-repeat center center;
+    }
+  }
+}
+
+.slide-sportsmen{
+  .order-in{
+    height: auto;
+    padding-bottom: 73px;
+  }
+}
+.order-form{
+
+}
+
+.choice-time{
+  margin: 0 0 18px;
+  overflow: hidden;
+  p{
+    float: left;
+    color: #a8aeb2;
+    font-family: $font;
+    font-size: 11px;
+    letter-spacing: 0.75px;
+    font-weight: 300;
+    line-height: 36px;
+    text-transform: uppercase;
+  }
+}
+.choice-time-list{
+  float: right;
+}
+.time-check{
+  float: left;
+  margin: 0 0 0 7px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  input{
+    position: absolute;
+    left: -2px;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    &:checked{
+      & + span{
+        background-color: #dce1e5;
+        color: #505050;
+      }
+    }
+  }
+  span{
+    color: #ed4618;
+    font-size: 14px;
+    font-weight: 400;
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+    line-height: 36px;
+    text-align: center;
+    @include border-radius(6px);
+    display: block;
+  }
+}
+
+.more-services{
+  margin: 0 0 49px;
+  @include clearfix;
+}
+
+.more-services-item{
+  float: left;
+  margin: 0 0 0 11px;
+  position: relative;
+  cursor: pointer;
+  &:first-child{
+    margin: 0;
+  }
+  &:hover {
+    span {
+      padding: 0 11px 0 12px;
+      color: #ffffff;
+      border: none;
+      @include box-shadow(0 2px 3.8px 0.2px rgba(1, 47, 137, 0.5), inset 0px -3px 0px 0px #1339b4);
+      background: #063bea;
+    }
+    .icon-men2 {
+      @include sprite($men2)
+    }
+    .icon-house {
+      @include sprite($house2)
+    }
+    .icon-car {
+      @include sprite($car2)
+    }
+  }
+  i{
+    margin-right: 8px;
+    float: left;
+  }
+  .icon-men2{
+    margin-top: 10px;
+  }
+  .icon-house{
+    margin-top: 10px;
+  }
+  .icon-car{
+    margin-top: 12px;
+  }
+  input{
+    position: absolute;
+    left: -1px;
+    visibility: hidden;
+    opacity: 1;
+    width: 0;
+    height: 0;
+    bottom: -1px;
+    &:checked{
+      & + span{
+        padding: 0 11px 0 12px;
+        color: #ffffff;
+        border: none;
+        height: 36px;
+        background-color: #1549f1;
+        @include border-radius(6px);
+        @include box-shadow(0 2px 3.8px 0.2px rgba(1, 47, 137, 0.5), inset 0px -3px 0px 0px #1339b4);
+        &:hover{
+          background: #063bea;
+        }
+        &:active{
+          background: #063bea;
+        }
+        .icon-men2{
+          @include sprite($men2)
+        }
+        .icon-house{
+          @include sprite($house2)
+        }
+        .icon-car{
+          @include sprite($car2)
+        }
+      }
+    }
+  }
+  span{
+    height: 36px;
+    border-radius: 5px;
+    display: block;
+    padding: 0 10px 0 11px;
+    line-height: 36px;
+    border: 1px solid #dfe4e8;
+    @include box-sizing(border-box);
+    @include border-radius(6px);
+    @include box-sizing(border-box);
+    color: #505050;
+    font-family: $font;
+    font-size: 11px;
+    left: 0.75px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
+

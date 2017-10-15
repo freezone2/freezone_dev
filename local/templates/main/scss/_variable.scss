@@ -1,0 +1,274 @@
+$img: "../images/";
+$font: "AvenirNext";
+$AvenirNext: $font;
+$Athelas: "Athelas";
+
+
+
+@mixin h-line-height($h) {
+  height: $h;
+  line-height: $h;
+}
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin sp-img-pos(){
+
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$img}#{$sprite-image});
+  display: inline-block;
+}
+.slides{
+  li{
+    display: none;
+    &:first-child{
+      display: block;
+    }
+  }
+}
+
+
+.slides{
+  li{
+    display: none;
+    &:first-child{
+      display: block;
+    }
+  }
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@include keyframes(no-anim) {
+
+}
+
+
+@mixin animation ($stuff ) {
+  -webkit-animation: $stuff;
+  -moz-animation: $stuff;
+  -ms-animation: $stuff;
+  animation: $stuff;
+}
+
+
+.site-wrapper{
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.site-wrapper-in{
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+.checkbox{
+  overflow: hidden;
+  position: relative;
+  padding-left: 2px;
+  label{
+    font-size: 11px;
+    line-height: 24px;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #a8adb1;
+    letter-spacing: 0.1px;
+  }
+  a{
+    color: #1d35ad;
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  input{
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    left: -1px;
+    top: -1px;
+    position: absolute;
+    & + span{
+      width: 11px;
+      height: 11px;
+      @include box-sizing(border-box);
+      background-color: #fff;
+      border: 1px solid #505050;
+      float: left;
+      overflow: visible;
+      margin: 4px 12px 0 0;
+      position: relative;
+      &:after{
+        @include sprite($check);
+        content: '';
+        position: absolute;
+        left: -2px;
+        bottom: -1px;
+        display: none;
+        z-index: 5;
+      }
+    }
+    &:checked{
+      & + span{
+        &:after{
+          display: inline-block;
+        }
+      }
+    }
+
+  }
+  span{
+    cursor: pointer;
+    text-transform: uppercase;
+    overflow: hidden;
+  }
+}
+
+
+.icon-log{
+  @include sprite($log);
+}
+.icon-men{
+  @include sprite($men);
+  &-d{
+    @include sprite($men-d);
+    vertical-align: middle;
+  }
+}
+.icon-tel{
+  @include sprite($tel)
+}
+.icon-arr-down{
+  @include sprite($arr-down);
+}
+.icon-calendar{
+  @include sprite($calendar);
+}
+.icon-file{
+  @include sprite($file);
+}
+.icon-file2{
+  @include sprite($file-2);
+}
+
+.icon-arr-drop{
+  @include sprite($arr-drop2)
+}
+
+.icon-tel-d{
+  @include sprite($tel-d);
+}
+.icon-mess{
+  @include sprite($mess);
+}
+.icon-back{
+  @include sprite($back);
+}
+.icon-sub-info{
+  @include sprite($sub-info);
+}
+.icon-arr-up{
+  @include sprite($arr-up);
+}
+.icon-house{
+  @include sprite($house);
+}
+.icon-car{
+  @include sprite($car);
+}
+.icon-men2{
+  @include sprite($men3);
+}
+.icon-close-select{
+  @include sprite($close-select);
+}
+
+.icon-send{
+  @include sprite($send);
+}
+
+.icon-print{
+  @include sprite($print);
+}
+.icon-exit{
+  @include sprite($exit);
+}
+
+.icon-drop{
+  &1{
+    @include sprite($drop1);
+  }
+  &2{
+    @include sprite($drop2);
+  }
+
+}
+
+.icon{
+  &-rubl{
+    @include sprite($rubl);
+  }
+  &-r-r{
+    @include sprite($r-r);
+  }
+  &-check2{
+    @include sprite($check2);
+  }
+  &-g-m{
+    @include sprite($g-m);
+  }
+  &-g-c{
+    @include sprite($g-c);
+  }
+
+
+}
+
+.icon-{
+  &exit2{
+    @include sprite($exit2);
+  }
+  &balance{
+    @include sprite($balance);
+  }
+  &prev{
+    @include sprite($prev)
+  }
+  &remove{
+    @include sprite($remove);
+  }
+  &calendar2{
+    @include sprite($calendar2);
+  }
+  &pen{
+    @include sprite($pen);
+  }
+  &extract{
+    @include sprite($extract)
+  }
+
+}

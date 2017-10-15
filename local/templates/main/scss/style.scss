@@ -1,0 +1,237 @@
+@import "setting";
+@import "partials/font";
+
+@import "sprite";
+@import "variable";
+@import 'animation';
+@import 'datepiker';
+@import 'datepiker2';
+
+
+
+*{
+  outline: none;
+  -ms-touch-action: none;
+  -webkit-overflow-scrolling: touch;
+
+  /* Prevent the callout on tap-hold and text selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* Prevent text resize on orientation change, useful for web-apps */
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+.site, .content,
+body, html,{
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: $font;
+  position: relative;
+  min-width: 1024px;
+}
+.wrapper{
+  margin: 0 auto ;
+  position: relative;
+  z-index: 5;
+  min-width: 1024px;
+  @include clearfix;
+  max-width: 1280px;
+}
+
+h1{
+  font-size: 72px;
+  font-family: $Athelas;
+  font-weight: 700;
+  line-height: 78px;
+  color: #505050;
+  letter-spacing: 0.3px;
+}
+
+h2{
+  font-size: 48px;
+  font-family: $Athelas;
+  font-weight: 400;
+  line-height: 68px;
+  letter-spacing: 0.1px;
+
+  color: #505050;
+}
+
+h3{
+  font-size: 30px;
+  font-family: $font;
+  font-weight: 400;
+  line-height: 42px;
+  color: #505050;
+  letter-spacing: 0.1px;
+  margin: 0 0 29px;
+}
+
+.button{
+  display: inline-block;
+  height: 60px;
+  font-family: $font;
+  letter-spacing: 0.1px;
+  line-height: 60px;
+  border: none;
+  cursor: pointer;
+  @include border-radius(6px);
+  .icon-men-d{
+    margin: -2px 7px 0 0;
+    position: relative;
+    top: -2px;
+  }
+  .icon-balance{
+    vertical-align: middle;
+    margin: -2px 20px 0 0;
+    position: relative;
+    top: -2px;
+  }
+}
+
+.btn-red{
+  @include box-shadow(0 4px 10px rgba(40,28,25,.5), inset 0px -3px 0px 0px #a63c1f);
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #ed4618;
+  &:hover{
+    background-color: #f94a26;
+  }
+  &:active{
+    background-color: #e73200;
+  }
+}
+.btn-blue{
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #1549f1;
+  @include box-shadow(0 4px 10px rgba(1,47,137,.5), inset 0px -3px 0px 0px #1339b4);
+  &:hover{
+    background: #1f54ff;
+  }
+  &:active{
+    background: #063bea;
+  }
+}
+
+.btn-gray{
+  height: 42px;
+  @include border-radius(6px);
+  background-color: #dce0e5;
+  color: #505050;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 42px;
+  padding: 0 23px 0 24px;
+  display: inline-block;
+  &:hover{
+    background: darken(#dce0e5, 5%);
+  }
+}
+
+.btn-white{
+  width: 200px;
+  margin-bottom: 25px;
+  height: 50px;
+  cursor: pointer;
+  @include border-radius(6px);
+  background-color: #fff;
+  @include box-shadow(0 2px 10px rgba(167,181,195,.5), inset 0px -3px 0px 0px #edf1f5);
+  line-height: 50px;
+  display: inline-block;
+  color: #e54b21;
+  font-size: 18px;
+  font-weight: 400;
+  &:hover{
+    color: #fff;
+    @include border-radius(6px);
+    background-color: #ed4517;
+    @include box-shadow(0 4px 10px rgba(40,28,25,.5), inset 0px -3px 0px 0px #a63c1f);
+    .icon-men-d{
+      @include sprite($men);
+    }
+    .icon-balance{
+      @include sprite($balance-a);
+    }
+  }
+  &:active{
+    background-color: #e73100;
+  }
+
+
+}
+
+.disable{
+  @include box-shadow(none !important  );
+  color: #a8aeb2 !important;
+  font-size: 18px;
+  line-height: 46px;
+  @include box-sizing(border-box);
+  border: 2px solid #dce1e5;
+  @include border-radius(6px);
+  cursor: default;
+  background: #fff !important;
+}
+
+@import "partials/fancybox";
+@import "partials/fullPage";
+@import "partials/select";
+
+@import "partials/header";
+@import "partials/nav";
+@import "partials/loader";
+
+@import "partials/index";
+@import "partials/about";
+@import "partials/certificate";
+@import "partials/faq";
+@import "partials/corporate";
+@import "partials/contacts";
+@import "partials/gallery";
+@import "partials/news";
+@import "partials/equipment";
+@import "partials/orders";
+@import "partials/form";
+@import "partials/404";
+
+
+
+
+
+//cabinet start
+@import "partials/cabinet-calendar";
+@import "partials/orders2";
+@import "partials/cabinet";
+@import "partials/balance";
+@import "partials/pay";
+@import "partials/team";
+
+
+
+
+
+
+
+@import "partials/footer";
+@import "partials/media";
+
+.about-comp-text_w70 p:first-child{
+  font-size: 14px;
+  line-height: 19px;
+}
+.about-comp-text_w70{
+  width: 90%;
+  padding-right: 0 !important;
+  padding-top: 50px !important;
+}
