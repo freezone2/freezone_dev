@@ -3298,13 +3298,15 @@ html.fp-enabled,
 }
 @media screen and (min-width:1300px) {
   .descriptor {
-    display:block;
-    position:absolute;
-    top:0;
-    padding:10px 0;
-    width:260px;
-    font-size:18px;
-    left:250px;
+    display: block;
+    position: absolute;
+    top: 8px;
+    padding: 10px 0;
+    width: 260px;
+    font-size: 15px;
+    line-height: 18px;
+    left: 260px;
+    color: #666;
   }
 }
 
