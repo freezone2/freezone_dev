@@ -37,6 +37,8 @@ if (!$USER->isAuthorized() && $is_personal_page) {
 // die("На сайте ведутся технические работы. Приносим извинения за неудобства - в ближайшее время он снова станет доступным!");
 // }
 
+$LastModified = gmdate('D, d M Y H:i:s', filemtime(__FILE__)).' GMT';
+header('Last-Modified: '. $LastModified);
 ?>
 <!doctype html>
 <!--[if lt IE 7]>
@@ -63,11 +65,11 @@ if (!$USER->isAuthorized() && $is_personal_page) {
     else{?>
         <meta name="viewport" content="width=1024" />
     <?}?>
-	<meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="telephone=no" />
     <meta name="mailru-domain" content="JakSs4nS3BV4A6PF" />
-	<meta name="yandex-verification" content="e0eb92b46dfa466f" />
-	<meta name="yandex-verification" content="84229b129c1bc1b7" />
-	<meta name="google-site-verification" content="gpTc8qGgcibXcbZSTKTeUT6YINX_1lYi4BjZvjLvxGQ" />
+    <meta name="yandex-verification" content="e0eb92b46dfa466f" />
+    <meta name="yandex-verification" content="84229b129c1bc1b7" />
+    <meta name="google-site-verification" content="gpTc8qGgcibXcbZSTKTeUT6YINX_1lYi4BjZvjLvxGQ" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <script src="/local/templates/main/js/libs/jquery-1.9.1.min.js"></script>
     <?if(NEW_DES == 1){?>
