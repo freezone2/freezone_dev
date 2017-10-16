@@ -3,8 +3,13 @@ RewriteCond %{HTTP:HTTPS} !=on [NC]
 RewriteRule ^(.*)$ https://www.freezone.net/$1 [R=301,L]
 SetEnvIf X-Forwarded-Proto https HTTPS=on
 
+# Redirect from index.php
 RewriteCond %{THE_REQUEST} ^.*/index.php
 RewriteRule ^(.*)index.php$ http://%{HTTP_HOST}/$1 [R=301,L]
+
+# Redirect from duble slshes
+RewriteCond %{THE_REQUEST} //
+RewriteRule .* /$0 [R=301,L]
 
 Options -Indexes 
 ErrorDocument 404 /404.php
