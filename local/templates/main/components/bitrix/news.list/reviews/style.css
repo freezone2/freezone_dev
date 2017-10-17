@@ -1,0 +1,24 @@
+div.news-list
+{
+	word-wrap: break-word;
+	width:100%;
+	margin:auto;
+	text-align:center;
+}
+div.news-list > div
+{
+	width:100%;
+	max-width:330px;
+	height:310px !important;
+	text-align:center;
+	display:inline-block;
+	vertical-align:top;
+	padding:20px;
+}
+div.news-list img.preview_picture
+{
+	margin:0 0 6px 0;
+}
+.news-date-time {
+	color:#486DAA;
+}

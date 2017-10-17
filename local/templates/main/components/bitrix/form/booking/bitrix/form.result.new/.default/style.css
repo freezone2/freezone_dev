@@ -1,0 +1,87 @@
+#booking-form {
+	width: 500px;
+	margin: 0 auto;
+	font-size: 22px;
+}
+#booking-form h3 {
+	text-align: center;
+	width: 500px;
+	margin-bottom: 5px;
+}
+
+table.booking-table {
+	display: block;
+	background: #fff;
+    /* height: 540px; */
+    -webkit-box-shadow: 0 2px 10px rgba(167, 181, 195, 0.5);
+    -moz-box-shadow: 0 2px 10px rgba(167, 181, 195, 0.5);
+    box-shadow: 0 2px 10px rgba(167, 181, 195, 0.5);
+    padding: 29px 25px 40px;
+    margin-bottom: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 5;
+}
+}
+table.booking-table:after {
+	left: 5px;
+    height: auto;
+    width: auto;
+    top: 5px;
+    bottom: 5px;
+    right: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #d3d6d8;
+    display: inline-block;
+    position: absolute;
+    content: '';
+}
+table.booking-table td {
+	padding-right: 30px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	line-height: 28px;
+	vertical-align: top;
+}
+table.booking-table input[type=text] {
+	font-size: 20px;
+}
+#booking-form .errortext {
+	font-weight: bold;
+	color: red;
+	font-size: 18px;
+	line-height: 22px;
+}
+#booking-form .booking-errors {
+	text-align: left;
+}
+#booking-form #booking-send {
+	width: 240px;
+    margin: 0 auto;
+    display: block;
+	background: #ed4618;
+    -webkit-box-shadow: 0 4px 10px rgba(40, 28, 25, 0.5), inset 0px -3px 0px 0px #a63c1f;
+    -moz-box-shadow: 0 4px 10px rgba(40, 28, 25, 0.5), inset 0px -3px 0px 0px #a63c1f;
+    box-shadow: 0 4px 10px rgba(40, 28, 25, 0.5), inset 0px -3px 0px 0px #a63c1f;
+    font-size: 18px;
+    color: #ffffff;
+	height: 60px;
+    font-family: "AvenirNext";
+    letter-spacing: 0.1px;
+    line-height: 60px;
+    border: none;
+    cursor: pointer;
+	border-radius: 4px;
+	position: relative;
+	top: 40px;
+}
+#booking-form #booking-send:hover {
+	background: #f94a26;
+}
+#booking-form textarea {
+	resize: none;
+}
