@@ -48,9 +48,14 @@ Header set Access-Control-Allow-Origin "*"
   ExpiresByType image/png "access plus 1 month"
   ExpiresByType image/jpg "access plus 1 month"
   ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType text/css "access plus 15 day"
+  ExpiresByType font/truetype "access plus 1 month"
+  ExpiresByType font/opentype "access plus 1 month"
+  ExpiresByType font/woff "access plus 1 month"
   ExpiresByType application/font-woff "access plus 1 month"
-  ExpiresByType text/css "access plus 3 day"
-  ExpiresByType application/javascript "access plus 3 day"  
+  ExpiresByType application/javascript "access plus 15 day"  
+  ExpiresByType application/x-javascript "access plus 15 day"  
 </IfModule>
 
 
