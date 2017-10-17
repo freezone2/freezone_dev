@@ -17,6 +17,8 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
     <div class="feedback-note"></div>
     <div class="note-text" data-text="<?=\Bitrix\Main\Localization\Loc::getMessage('FORM_DATA_SAVED_RES')?>"></div>
 <?
+	$input_mask = "";
+	$input_id = "";
 	foreach ($arResult["QUESTIONS"] as $FIELD_SID => $arQuestion)
 	{
 	    //pRU($FIELD_SID);
@@ -24,30 +26,47 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
         switch ($arQuestion["CAPTION"]) {
             case "Ваше имя":
                 $arQuestion["CAPTION_EN"] = 'Your name';
+                $input_id = 'id="name"';
+                $input_mask = "";
                 break;
             case "E-mail":
-                $arQuestion["CAPTION_EN"] = $arQuestion["CAPTION"];
+                $arQuestion["CAPTION_EN"] = $arQuestion["CAPTION"];
+                $input_id = 'id="mail"';
+                $input_mask = "";
                 break;
             case "Телефон":
-                $arQuestion["CAPTION_EN"] = 'Phone';
+                $arQuestion["CAPTION_EN"] = 'Phone';
+                $input_id = 'id="pnone"';
+                $input_mask = 'data-mask="+7 (000) 000-00-00"';
                 break;
             case "Категория номера":
-                $arQuestion["CAPTION_EN"] = 'Room category';
+                $arQuestion["CAPTION_EN"] = 'Room category';
+                $input_id = '';
                 break;
             case "Дата заезда":
-                $arQuestion["CAPTION_EN"] = 'Date from';
+                $arQuestion["CAPTION_EN"] = 'Date from';
+                $input_id = '';
+                $input_mask = 'data-mask="00.00.0000"';
                 break;
             case "Дата отъезда":
-                $arQuestion["CAPTION_EN"] = 'Date to';
+                $arQuestion["CAPTION_EN"] = 'Date to';
+                $input_id = '';
+                $input_mask = 'data-mask="00.00.0000"';
                 break;
             case "Количество гостей":
-                $arQuestion["CAPTION_EN"] = "Guests count";
+                $arQuestion["CAPTION_EN"] = "Guests count";
+                $input_id = '';
+                $input_mask = "";
                 break;
             case "Желаемая дата":
-                $arQuestion["CAPTION_EN"] = 'Date';
+                $arQuestion["CAPTION_EN"] = 'Date';
+                $input_id = '';
+                $input_mask = "";
                 break;
             case "Желаемое время":
-                $arQuestion["CAPTION_EN"] = 'Time';
+                $arQuestion["CAPTION_EN"] = 'Time';
+                $input_id = '';
+                $input_mask = "";
                 break;
         }
 
@@ -69,7 +88,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
                         <?}?>
 					</select>
                 <?}else{?>
-                    <input type="text" class="inputtext input-text<?if($arQuestion['STRUCTURE'][0]["FIELD_TYPE"] == "date" || $arQuestion["CAPTION"] == "Желаемое время"){?> date-text<?}?>" name="form_<?=$arQuestion['STRUCTURE'][0]["FIELD_TYPE"]?>_<?=$arQuestion['STRUCTURE'][0]["ID"]?>" value="" size="0"><?if($arQuestion['STRUCTURE'][0]["FIELD_TYPE"] == "date" || $arQuestion["CAPTION"] == "Желаемое время"){?>
+                    <input <?=$input_mask?> type="text" class="inputtext input-text<?if($arQuestion['STRUCTURE'][0]["FIELD_TYPE"] == "date" || $arQuestion["CAPTION"] == "Желаемое время"){?> date-text<?}?>" name="form_<?=$arQuestion['STRUCTURE'][0]["FIELD_TYPE"]?>_<?=$arQuestion['STRUCTURE'][0]["ID"]?>" <?=$input_id?> value="" size="0"><?if($arQuestion['STRUCTURE'][0]["FIELD_TYPE"] == "date" || $arQuestion["CAPTION"] == "Желаемое время"){?>
                     <?$APPLICATION->IncludeComponent(
                             'bitrix:main.calendar',
                             '',
@@ -91,7 +110,14 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 		}
 	}
 	?>
-</div>
+</div>
+<script type="text/javascript">
+	var rep = /[\.;":'0-9]/; 
+	$("#name").on('keypress keyup', function(){
+		value = $(this).val().replace(rep, ''); 
+		$(this).val(value); 
+	});
+</script>
 <div class="modal-footer">
 <input type="submit" name="web_form_submit" class="btn btn-request btn-submit" value="<?=(LANGUAGE_ID == 'en' ? 'Send' : 'Отправить')?>" />
 </div>
