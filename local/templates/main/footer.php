@@ -648,5 +648,15 @@ src="https://www.facebook.com/tr?id=1431626816896121&ev=PageView&noscript=1"
         openThanskFeedback('Покупка сертификата', 'Спасибо. Данные по сертификату отправлены вам на E-mail', true, '/certificate/');
     </script>
 <?}?>
+<style type="text/css">
+    .page_headers {
+    	position:absolute;
+    	left:-1000px;
+    }
+</style>
+<div class="page_headers">
+    <h1 itemprop="name"><?=$APPLICATION->Showtitle();?></h1>
+    <div itemprop="description"><?=$APPLICATION->GetDescription("description");?></div>
+</div>
 </body>
 </html>

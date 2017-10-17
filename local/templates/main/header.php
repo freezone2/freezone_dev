@@ -171,7 +171,8 @@ header('Last-Modified: '. $LastModified);
 <meta name="cmsmagazine" content="8d83b506f5e84a5f11295e2f5a77dc0e" /> 
 </head>
 
-<body<?if(NEW_DES == 1){?> class="custom-new-style"<?}?>>
+<body<?if(NEW_DES == 1){?> class="custom-new-style"<?}?>
+itemscope="itemscope" itemtype="http://schema.org/WebPage">
 <?$APPLICATION->ShowPanel();?>
 <?if (!empty($_REQUEST['panel'])) $APPLICATION->ShowPanel();?>
 <?if(NEW_DES == 2){?>
