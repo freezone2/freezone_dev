@@ -461,4 +461,16 @@ itemscope="itemscope" itemtype="http://schema.org/WebPage">
         );?>
         <?$APPLICATION->ShowViewContent('elems_list_wrap_head');?>
     <?}?>
+
+    <div class="breadcrumb">
+    <?$APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb",
+	"",
+	Array(
+		"PATH" => "",
+		"SITE_ID" => "s2",
+		"START_FROM" => "0"
+	)
+    );?>
+    </div>
 <?}?>

@@ -1,0 +1,29 @@
+.bx-breadcrumb {
+	margin: 10px 0;
+}
+.bx-breadcrumb i {
+	color: #b5bdc2;
+	line-height: 13px;
+	font-size: 12px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.bx-breadcrumb .bx-breadcrumb-item {
+	display:inline;
+	margin-bottom: 20px;
+	white-space: nowrap;
+	line-height: 20px;
+	vertical-align: middle;
+	margin: 0 10px;
+}
+.bx-breadcrumb .bx-breadcrumb-item:not(:first-child):before {
+	content: '-';
+}
+.bx-breadcrumb .bx-breadcrumb-item span {
+	font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 14px;
+	white-space: normal;
+	color:#333;
+}
+.bx-breadcrumb .bx-breadcrumb-item a {border-bottom: none;}
+.bx-breadcrumb .bx-breadcrumb-item a:hover {}

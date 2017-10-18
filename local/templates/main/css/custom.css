@@ -2486,7 +2486,7 @@ margin-top: 16px;
   text-align: center; }
 
 .container-list-elements h2 {
-  margin: 54px 0 54px; }
+  margin: 14px 0 54px; }
 
 .item-line-form input.input-text {
   float: none; }
@@ -3697,4 +3697,13 @@ img.calendar-icon-hover {
 	.site-line-air #home-cert-order {
 		width: 380px;
 	}
+}
+.order-form .checkbox label {
+	padding-left: 0;
+}
+.order-form .checkbox label:before {
+	content: none;
+}
+.order-form .checkbox label:hover {
+	color: #a8adb1;
 }

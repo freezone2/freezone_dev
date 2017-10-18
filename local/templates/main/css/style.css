@@ -17241,3 +17241,10 @@ table.prof-rates tbody td {
 	font-size:34px;
 	line-height:35px;
 }
+.breadcrumb {
+	text-align: center !important;
+	margin: auto !important;
+	padding: 0;
+	width: 100%;
+	max-width: 300px;
+}
