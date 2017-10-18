@@ -56,7 +56,7 @@ if ($arResult["isFormTitle"])
 	foreach ($arResult["QUESTIONS"] as $FIELD_SID => $arQuestion)
 	{
 	?>
-		<tr data-caption="<?=$arQuestion["CAPTION"]?>" class="form-item">
+		<tr>
 			<td>
 				<?if (is_array($arResult["FORM_ERRORS"]) && array_key_exists($FIELD_SID, $arResult['FORM_ERRORS'])):?>
 				<span class="error-fld" title="<?=$arResult["FORM_ERRORS"][$FIELD_SID]?>"></span>
@@ -110,17 +110,3 @@ if($arResult["isUseCaptcha"] == "Y")
 } //endif (isFormNote)
 ?>
 </div>
-<script type="text/javascript" src="/local/templates/main/js/libs/jquery.maskedinput.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$(".form-item").on('click', function(){
-			caption = $(this).attr('data-caption');
-			if (caption=='Телефон'){
-				$(this).find('input').mask("+7 (999) 999-99-99");
-			}
-			if (caption=='Дата'){
-				$(this).find('input').mask("99.99.9999");
-			}
-		});
-	});
-</script>
