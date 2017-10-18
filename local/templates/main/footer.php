@@ -420,7 +420,9 @@ if (!preg_match('#/cabinet/#simu', $APPLICATION->GetCurDir())){?>
                     <div class="col-6">
                         <?= date("Y"); ?><?=Loc::getMessage("FOOTER_COPYRIGHT");?>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="<?=(LANGUAGE_ID == 'en' ? "/en/privacy-policy/" : "/politika-konfidentsialnosti/")?>"><u><?=Loc::getMessage("RRIVACY_POLICY");?></u></a></p>
+                        <a href="<?=(LANGUAGE_ID == 'en' ? "/en/privacy-policy/" : "/politika-konfidentsialnosti/")?>"><u><?=Loc::getMessage("RRIVACY_POLICY");?></u></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="<?=(LANGUAGE_ID == 'en' ? "/en/sitemap/" : "/sitemap/")?>"><?=Loc::getMessage("FOOTER_SITEMAP");?></a></p>
                     </div>
                     <div class="col-6 ">
                         <span class="float-md-right"><?=Loc::getMessage("FOOTER_CREATE");?></span>
