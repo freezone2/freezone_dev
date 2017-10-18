@@ -20,20 +20,25 @@ if(!is_array($css) || !in_array("/bitrix/css/main/font-awesome.css", $css))
 	$strReturn .= '<link href="'.CUtil::GetAdditionalFileURL("/bitrix/css/main/font-awesome.css").'" type="text/css" rel="stylesheet" />'."\n";
 }
 
-$strReturn .= '<div class="bx-breadcrumb">';
+$strReturn .= '
+<div class="bx-breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">';
 
 $strReturn .= '
-	<div class="bx-breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+	<div class="bx-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 		<a href="/" itemprop="url">
-			<span itemprop="title">Главная</span>
+			<span itemprop="name">Главная</span>
 		</a>
+		<meta itemprop="position" content="1" />
 	</div>';
 
 $itemSize = count($arResult);
+$temp_arr = array();
 for($index = 0; $index < $itemSize; $index++)
 {
 	$title = htmlspecialcharsex($arResult[$index]["TITLE"]);
-
+	if (isset($temp_arr[$title])) continue;
+	$temp_arr[$title] = $title;
+	
 	$nextRef = ($index < $itemSize-2 && $arResult[$index+1]["LINK"] <> ""? ' itemref="bx_breadcrumb_'.($index+1).'"' : '');
 	$child = ($index > 0? ' itemprop="child"' : '');
 	$arrow = ($index > 0? '<i class="fa fa-angle-right"></i>' : '');
@@ -41,11 +46,12 @@ for($index = 0; $index < $itemSize; $index++)
 	if($arResult[$index]["LINK"] <> "" && $index != $itemSize-1)
 	{
 		$strReturn .= '
-			<div class="bx-breadcrumb-item" id="bx_breadcrumb_'.$index.'" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"'.$child.$nextRef.'>
+			<div class="bx-breadcrumb-item" id="bx_breadcrumb_'.$index.'" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 				'.$arrow.'
 				<a href="'.$arResult[$index]["LINK"].'" title="'.$title.'" itemprop="url">
-					<span itemprop="title">'.$title.'</span>
+					<span itemprop="name">'.$title.'</span>
 				</a>
+				<meta itemprop="position" content="2" />
 			</div>';
 	}
 	else
@@ -57,6 +63,7 @@ for($index = 0; $index < $itemSize; $index++)
 			</div>';
 	}
 }
+	print_r($temp_arr);
 
 $strReturn .= '<div style="clear:both"></div></div>';
 
