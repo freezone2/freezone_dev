@@ -406,7 +406,7 @@ if (!preg_match('#/cabinet/#simu', $APPLICATION->GetCurDir())){?>
                         ),
                                                          false
                         );?>
-                        <p class="footer-tel"><a href="tel: <?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?>"><?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?></a></p>
+                        <p class="footer-tel"><a href="tel: <?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?>" rel="nofollow"><?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?></a></p>
                         <p class="footer-addr"><?=Loc::getMessage("FOOTER_TEXT");?></p>
                         <p><a href="<?=(LANGUAGE_ID == 'en' ? "/en/contacts/" : "/contacts/")?>"><?=Loc::getMessage("FOOTER_MAP");?></a></p>
                     </div>
@@ -651,7 +651,8 @@ src="https://www.facebook.com/tr?id=1431626816896121&ev=PageView&noscript=1"
 <style type="text/css">
     .page_headers {
     	position:absolute;
-    	left:-1000px;
+    	left:-100000px;
+    	top:-10000px;
     }
 </style>
 <div class="page_headers">

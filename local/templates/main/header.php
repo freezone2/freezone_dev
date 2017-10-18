@@ -230,7 +230,7 @@ itemscope="itemscope" itemtype="http://schema.org/WebPage">
                                                      false
                     );?>
                     <div class="header-tel">
-                        <p><a href="tel: <?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?>"><?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?></a></p></div>
+                        <p><a href="tel: <?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?>" rel="nofollow"><?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?></a></p></div>
                 </div>
             </div>
         </nav>
@@ -242,7 +242,7 @@ itemscope="itemscope" itemtype="http://schema.org/WebPage">
                     <div class="logo">
                         <a class="logo-link" href="/<?=(LANGUAGE_ID == 'en' ? 'en/' : '');?><?=($is_personal_page ? 'personal/' : '');?>"><img src="/local/templates/main/images/logo.png" alt="" /></a>
                         <div class="header-tel">
-                            <p><a href="tel: <?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?>"><?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?></a></p></div>
+                            <p><a href="tel: <?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?>" rel="nofollow"><?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?></a></p></div>
                     </div>
 
                     <div class="navbar-toggler burger" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -264,7 +264,7 @@ itemscope="itemscope" itemtype="http://schema.org/WebPage">
                     <div class="clearfix hidden-md-up"></div>
                     <div class="row header-bottom clearfix">
                         <div class="col-md-auto header-tel">
-                            <p><a href="tel: <?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?>"><?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?></a></p>
+                            <p><a href="tel: <?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?>" rel="nofollow"><?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?></a></p>
                         </div>
                         <? if(LANGUAGE_ID != 'en') { ?>
                             <a class="col-md-auto header-top-button header-callback" href="/air/#amateur">
@@ -306,7 +306,7 @@ itemscope="itemscope" itemtype="http://schema.org/WebPage">
                         <div class="logo">
                             <a class="logo-link" href="/<?=(LANGUAGE_ID == 'en' ? 'en/' : '');?><?=($is_personal_page ? 'personal/' : '');?>"><img src="/local/templates/main/images/logo.png" alt="" /></a>
                             <div class="header-tel">
-                                <p><a href="tel: <?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?>"><?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?></a></p></div>
+                                <p><a href="tel: <?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?>" rel="nofollow"><?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?></a></p></div>
                             <div class="descriptor">
                                 Полет в аэротрубе в Москве – официальный сайт FreeZone
                             </div>
@@ -331,7 +331,7 @@ itemscope="itemscope" itemtype="http://schema.org/WebPage">
                         <div class="clearfix hidden-md-up"></div>
                         <div class="row header-bottom">
                             <div class="col-md-auto header-tel">
-                                <p><a href="tel: <?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?>"><?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?></a></p>
+                                <p><a href="tel: <?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?>" rel="nofollow"><?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?></a></p>
                             </div>
                             <? if(LANGUAGE_ID != 'en') { ?>
                                 <a class="col-md-auto header-top-button header-callback" href="/air/#amateur">
@@ -362,7 +362,7 @@ itemscope="itemscope" itemtype="http://schema.org/WebPage">
                                                                      false
                                     );?>
                                     <div class="header-tel">
-                                        <p><a href="tel: <?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?>"><?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?></a></p></div>
+                                        <p><a href="tel: <?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?>" rel="nofollow"><?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?></a></p></div>
                                 </div>
                             </div>
                         </nav>
@@ -423,7 +423,7 @@ itemscope="itemscope" itemtype="http://schema.org/WebPage">
                             </a>
                         <? } ?>
                         <div class="header-tel">
-                            <p><a href="tel: <?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?>"><?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?></a>
+                            <p><a href="tel: <?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?>" rel="nofollow"><?echo COption::GetOptionString( "askaron.settings", "UF_PHONE" );?></a>
                                 <i class="icon-tel"></i></p>
                         </div>
                     </div>
