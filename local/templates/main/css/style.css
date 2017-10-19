@@ -8012,8 +8012,8 @@ html.cabinet .show-to-block .header-orders {
 .home-cert {
 	border-top: 1px dashed #dfe4ea;
 	border-bottom: 1px dashed #dfe4ea;
-	padding: 30px 0px;
-	margin: 30px 0px 10px;
+	/* padding: 30px 0px; */
+	/* margin: 30px 0px 10px; */
 }
 .index-service-list .home-cert {
 	padding-bottom: 60px;
@@ -10767,8 +10767,8 @@ html.cabinet .show-to-block .header-orders {
 }
 
 .equipment-info-in {
-  padding: 50px 0 30px;
-  height: 100%;
+  padding: 50px 0 0 0;
+  /* height: 100%; */
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -10784,7 +10784,7 @@ html.cabinet .show-to-block .header-orders {
 
 .equipment-info-in-an {
 	font-size: 20px;
-	padding-bottom: 50px;
+	/* padding-bottom: 50px; */
 	text-align: center;
 }
 
