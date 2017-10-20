@@ -535,11 +535,11 @@ if (!preg_match('#/cabinet/#simu', $APPLICATION->GetCurDir())){?>
 
 <?if(NEW_DES == 1){?><?$APPLICATION->ShowViewContent('form_request');?><?}?>
 
-<script src="/local/templates/main/js/libs/jquery-1.9.1.js"></script>
-<script src="/local/templates/main/js/libs/scrolloverflow.js"></script>
-<script src="/local/templates/main/js/libs/jquery.fullPage.js"></script>
+<script src="/local/templates/main/js/libs/jquery-1.9.1.min.js"></script>
+<script src="/local/templates/main/js/libs/scrolloverflow.min.js"></script>
+<script src="/local/templates/main/js/libs/jquery.fullPage.min.js"></script>
 
-<link rel="stylesheet" href="/local/templates/main/js/fancybox/jquery.fancybox.css">
+<link rel="stylesheet" href="/local/templates/main/js/fancybox/jquery.fancybox.min.css">
 <script src="/local/templates/main/js/fancybox/jquery.fancybox.js" type="text/javascript"></script>
 <script src="/local/templates/main/js/fancybox/jquery.fancybox-thumbs.js" type="text/javascript"></script>
 <script type="text/javascript">$(".slider").fancybox({helpers:{overlay:{locked:false},thumbs: true}});</script>
@@ -549,24 +549,24 @@ if (!preg_match('#/cabinet/#simu', $APPLICATION->GetCurDir())){?>
 <script src="/local/templates/main/js/libs/select2.min.js"></script>
 <script src="/local/templates/main/js/libs/datepiker.js"></script>
 <script type="text/javascript" src="/local/templates/main/js/libs/moment.min.js"></script>
-<script type="text/javascript" src="/local/templates/main/js/libs/jquery.daterangepicker.js"></script>
+<script type="text/javascript" src="/local/templates/main/js/libs/jquery.daterangepicker.min.js"></script>
 <?if(NEW_DES == 1){?>
-    <script src="/local/templates/main/js/new_script.js"></script>
+    <script src="/local/templates/main/js/new_script.min.js"></script>
 <?}else{?>
-<script src="/local/templates/main/js/script.js"></script>
+<script src="/local/templates/main/js/script.min.js"></script>
 <?}?>
-<script src="/local/templates/main/custom_js/calendar.js" type="text/javascript"></script>
+<script src="/local/templates/main/custom_js/calendar.min.js" type="text/javascript"></script>
 <!--<script src="/local/templates/main/js/libs/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>-->
-<script src="/local/templates/main/js/libs/jquery-ui-1.12.1.js" type="text/javascript"></script>
+<script src="/local/templates/main/js/libs/jquery-ui-1.12.1.min.js" type="text/javascript"></script>
 <script src="https://www.jscache.com/wejs?wtype=certificateOfExcellence&amp;uniq=660&amp;locationId=7034200&amp;lang=ru&amp;year=2017&amp;display_version=2"></script>
 <?if(NEW_DES == 1){?>
     <?if($isMain){?>
         <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <?}?>
     <script src="<?=SITE_TEMPLATE_PATH?>/js/libs/popper.min.js"></script>
-    <script src="<?=SITE_TEMPLATE_PATH?>/js/libs/bootstrap.js"></script>
+    <script src="<?=SITE_TEMPLATE_PATH?>/js/libs/bootstrap.min.js"></script>
     <script src="<?=SITE_TEMPLATE_PATH?>/js/library.js"></script>
-    <script src="<?=SITE_TEMPLATE_PATH?>/js/custom.js"></script>
+    <script src="<?=SITE_TEMPLATE_PATH?>/js/custom.min.js"></script>
 <?}?>
 
 <script>
