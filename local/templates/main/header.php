@@ -78,7 +78,6 @@ header('Last-Modified: '. $LastModified);
     <link rel="stylesheet" href="/local/templates/main/css/style.css">
     <link rel="stylesheet" href="/local/templates/main/custom_css/style.css">
     <?if(NEW_DES == 1){?>
-        <link rel="stylesheet" href="/local/templates/main/css/jquery.fancybox.min.css">
         <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/css/custom.css">
     <?}?>
 

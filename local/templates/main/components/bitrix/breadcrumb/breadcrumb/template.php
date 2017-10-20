@@ -39,6 +39,9 @@ for($index = 0; $index < $itemSize; $index++)
 	if (isset($temp_arr[$title])) continue;
 	$temp_arr[$title] = $title;
 	
+	// Временно, пока не отремонтирована страница О нас
+	if (strstr($title,'О нас')) continue;
+
 	$nextRef = ($index < $itemSize-2 && $arResult[$index+1]["LINK"] <> ""? ' itemref="bx_breadcrumb_'.($index+1).'"' : '');
 	$child = ($index > 0? ' itemprop="child"' : '');
 	$arrow = ($index > 0? '<i class="fa fa-angle-right"></i>' : '');
@@ -63,8 +66,9 @@ for($index = 0; $index < $itemSize; $index++)
 			</div>';
 	}
 }
-	print_r($temp_arr);
+	//print_r($temp_arr);
 
 $strReturn .= '<div style="clear:both"></div></div>';
 
-return $strReturn;
+if ($_SERVER['PHP_SELF']!='/index.php') return $strReturn;
+else return "";

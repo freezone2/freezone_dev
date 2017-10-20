@@ -13,7 +13,7 @@ Loc::loadLanguageFile(__FILE__);
 				$ff = CFile::ResizeImageGet($file['ID'], array('width'=>1000, 'height'=>600), BX_RESIZE_IMAGE_PROPORTIONAL_ALT);
 				$ff_small = CFile::ResizeImageGet($file['ID'], array('width'=>216, 'height'=>144), BX_RESIZE_IMAGE_PROPORTIONAL_ALT);
                 ?>
-                    <a title="<?=$file['DESCRIPTION'];?>" class="fancybox-img" rel="group" href="<?=$ff['src'];?>"><img src="<?=$ff_small['src'];?>" alt="" /></a>
+                    <a title="<?=$file['DESCRIPTION'];?>" class="fancybox-img" rel="group" href="<?=$ff['src'];?>" data-fancybox="gallery"><img src="<?=$ff_small['src'];?>" alt="" /></a>
 
                 <?}?>
             </div>

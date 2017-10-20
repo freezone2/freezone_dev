@@ -535,14 +535,19 @@ if (!preg_match('#/cabinet/#simu', $APPLICATION->GetCurDir())){?>
 
 <?if(NEW_DES == 1){?><?$APPLICATION->ShowViewContent('form_request');?><?}?>
 
-<script src="/local/templates/main/js/libs/jquery-1.9.1.min.js"></script>
+<script src="/local/templates/main/js/libs/jquery-3.2.1.min.js"></script>
 <script src="/local/templates/main/js/libs/scrolloverflow.min.js"></script>
 <script src="/local/templates/main/js/libs/jquery.fullPage.min.js"></script>
 
-<link rel="stylesheet" href="/local/templates/main/js/fancybox/jquery.fancybox.min.css">
+<!--
+<link rel="stylesheet" href="/local/templates/main/js/fancybox/jquery.fancybox.css">
 <script src="/local/templates/main/js/fancybox/jquery.fancybox.js" type="text/javascript"></script>
 <script src="/local/templates/main/js/fancybox/jquery.fancybox-thumbs.js" type="text/javascript"></script>
-<script type="text/javascript">$(".slider").fancybox({helpers:{overlay:{locked:false},thumbs: true}});</script>
+<script type="text/javascript">$(".slider").fancybox({helpers:{overlay:{locked:true},thumbs: true}});</script>
+-->
+
+<link rel="stylesheet" href="/local/templates/main/js/fancybox/jquery.fancybox.min.css" />
+<script src="/local/templates/main/js/fancybox/jquery.fancybox.min.js"></script>
 
 <script src="/local/templates/main/js/libs/jquery.flexslider-min.js"></script>
 <script src="/local/templates/main/js/libs/maskedInput.js"></script>
